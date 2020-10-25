@@ -1,0 +1,12 @@
+---
+title: Configure docker
+---
+
+This will install the required R packages.  For sake of completeness, the list below includes all of the required R packages, but not all of these will be installed, since some are already installed system wide.  In particular, tidyverse is already isntalled system wide.  Packages that are not already installed will be installed to the user library.
+
+```{r}
+dir.create(path = Sys.getenv("R_LIBS_USER"), showWarnings = FALSE, recursive = TRUE)
+.libPaths(Sys.getenv("R_LIBS_USER"))
+needed.packages = scan("required_R_packages.txt", what="character")
+for (needed.package in needed.packages) if (!require(needed.package, character.only=TRUE)) install.packages(needed.package)
+```
