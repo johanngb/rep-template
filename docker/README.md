@@ -1,13 +1,15 @@
 # Files to set up the Docker image
 
-This directory contains the following files:
+This directory contains the Dockerfile used to create the image as well as two subdirectories:
 
-* startup.sh -- A script that will be run (as root) when the container starts.  If the default is fine, this file can be safely deleted (it is also located at /dockerstartup/startup_default.sh).
-* shiny-server.conf -- This can be edited to change the directory used by the shiny server.  The default is the home directory (/home/docker).  If the
-default is fine, this file can be safely deleted (it is also located at /dockerstartup/shiny_server_default.conf).
-* console_message.txt -- This is the message that is displayed when the container starts.  If the default is fine, this file can be safely deleted (it is also located at /dockerstartup/console_message_default.txt).
-* index.md -- A markdown file that is converted to html, and then used as the main web page.  If the default is fine, this file can be safely deleted (it is also located at /dockerstartup/index_default.md).
-* Dockerfile -- The dockerfile used to build the image.
-* install.rmd -- An R markdown file that is to be run when creating the image.  This file can be used, for example, to install any necessary R packages.
+* Files in "build" are used to set up the docker image when it is being built.  It includes:
+    * makefile -- Any commands to be run to set up the image can be placed in here.  The default is a single command to render install.Rmd (see below).
+    * install.Rmd -- An R markdown file that can be used to help setup the image.  This file can be used, for example, to install any necessary R packages.  By default it installs the R packages in "required_R_packages" (see below).
+    * required_R_packages.txt -- a text file listing R packages that need to be installed.  This file is read by install.Rmd, which installs the packages.
+* Files in "startup" are used to configure the docker container when it starts up. 
+    * startup.sh -- A script that will be run (as root) when the container starts.  By default it starts the servers and prints a message to the console.  If the default is fine, this file can be safely deleted (it is also located at /startup/startup_default.sh).
+    * console_message.txt -- This is the message that is displayed when the container starts.  If the default is fine, this file can be safely deleted (it is also located at /startup/console_message_default.txt).
+    * index.md -- A markdown file that is converted to html, and then used as the main web page.  If the default is fine, this file can be safely deleted (it is also located at /startup/index_default.md). 
+
 
 
