@@ -14,7 +14,6 @@ analysis:
 clean:
 	echo "Deleting all processed data and output..."
 	rm -f data/processed/*
-	rm -f data/download.html	
 	rm -f analysis/*.html	
 	rm -f output/*
 	rm -f archive.tar.bz2
