@@ -1,7 +1,5 @@
 import(MASS)
 
-importFrom("stats", "mean", "sd")   
-
 export(
 myfunction
 )

@@ -1,0 +1,36 @@
+---
+title: "Preprocess"
+output: html_document
+jupyter:
+  jupytext:
+    formats: ipynb,Rmd
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.4.2
+  kernelspec:
+    display_name: R
+    language: R
+    name: ir
+---
+
+```{r}
+## Set directories
+data_in_dir  = "../data/original/"
+data_out_dir = "../data/processed/"
+```
+
+```{r}
+## Read in the data
+# rawdata = read.csv(paste0(data_in_dir, "somedata.csv"))
+```
+
+```{r}
+## Preprocess the data
+```
+
+```{r}
+## Output the data
+# save(processeddata, file=paste0(data_out_dir, "processeddata.rda"))
+```

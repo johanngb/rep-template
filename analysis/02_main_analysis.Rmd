@@ -1,5 +1,5 @@
 ---
-title: "Preprocess"
+title: "Main Analysis"
 output: html_document
 jupyter:
   jupytext:
@@ -16,13 +16,23 @@ jupyter:
 ---
 
 ```{r}
+## Set directories
+input_dir  = "../data/processed/"
+output_dir = "../output/"
+```
+
+```{r}
 ## Read in the data
+# load(paste0(input_dir, "processeddata.rda"))
 ```
 
 ```{r}
-## Preprocess the data
+## Run some analyses
 ```
 
 ```{r}
-## Output the data
+## Make and output some plots
+# pdf(paste0(output_dir, "plot.pdf"))
+# ...
+# dev.off()
 ```

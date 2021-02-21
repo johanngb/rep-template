@@ -1,0 +1,27 @@
+---
+title: "Download Data"
+output: html_document
+jupyter:
+  jupytext:
+    formats: ipynb,Rmd
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.4.2
+  kernelspec:
+    display_name: R
+    language: R
+    name: ir
+---
+
+```{r}
+## Set directories
+data_dir  = "./original/"
+```
+
+```{r}
+## Download data
+# curl::curl_download("https://datasource.com/somedata.csv", paste0(data_dir, "somedata.csv"))
+```
+

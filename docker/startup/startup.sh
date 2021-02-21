@@ -1,3 +1,4 @@
+chown -R rep:rep /home/rep
 /startup/jupyter.sh
 /startup/rstudio.sh
 /startup/shiny.sh

@@ -1,11 +1,11 @@
-Package: rep_template_package
-Title: Reproducibility template R package
+Package: mypackage
+Title: Template R package
 Description: A template package.  In most cases a few sentences would go here.
 Version: 1.0 
-Date: 2021-01-31 
-Imports: MASS, nnet, randomForest, glmnet
-Author: My Name <me@somewhere.edu> 
-Maintainer: My Name <me@somewhere.edu> 
+Date: 2021-02-21 
+Imports: MASS
+Author: My Name <me@somewhere.com> 
+Maintainer: My Name <me@somewhere.com> 
 License: GPL 
 URL: https://github.com/me/myrepo
 LazyLoad: yes  
