@@ -1,7 +1,9 @@
-# Use johanngb/rep-int:latest as the base image
-# You may want to change "latest" to a specific version, e.g. "2021",
-# so that it's clear which version is used.
-FROM johanngb/rep-int:latest  
+# Use johanngb/rep-int:2021v1 as the base image
+# You may want to change the version to
+# something other than "2021v1".  See  
+# https://hub.docker.com/r/johanngb/rep-int
+# for notes on specific versions.
+FROM johanngb/rep-int:2021v1
 
 # Copy your project's files into the docker image
 # The files are added to the home directory of user "rep"
