@@ -4,15 +4,19 @@ Below is a very brief summary (nearly a TL;DR) on how to turn your project into 
 
 ### Download
 
-The command below will download the contents of this repository, but will not overwrite any existing files.  You can therefore use it to add these files to an existing project, and then delete whatever you don't want.
+The command below will download the contents of this repository.  This command will not overwrite any existing files, so you can use it to safely add the files from this repository to an existing project; then delete whatever you don't want.  (Note: if you have existing files / directories with the same names, they won't get overwritten, but you will get error messages; these can be ignored.)
 
-    curl -L http://github.com/johanngb/rep-template/archive/master.tar.gz | tar --skip-old-files --strip-components=1 -xz
+    curl -L http://github.com/johanngb/rep-template/archive/master.tar.gz | tar --strip-components=1 -xkz
+
+(On Windows, run this in "Command Prompt", not powershell.)
 
 ### Build docker image
 
 After looking in the `docker` directory and making any changes you might want, you can use the command below to build a docker image.  Note that if you have a reasonably simple project, you might not need to make any changes in the `docker` directory at all.  Make sure to run the command below in the main project directory (and not, e.g., in the `docker` sub-directory).  You will need to pick a name for your image; here we use `myimage`.
 
-    docker build -t myimage -f docker/Dockerfile .
+    docker build -t myimage --no-cache -f docker/Dockerfile .
+    
+
 
 ### Run docker
 
